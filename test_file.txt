@@ -1,0 +1,1 @@
+Este é um arquivo de teste criado no Google Colab para demonstrar o fluxo de trabalho do Git com credenciais salvas.
