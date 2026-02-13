@@ -1,0 +1,387 @@
+
+/* ========== GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+    line-height: 1.6;
+    background-color: #fef9f5; /* off-white quente */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #5e3a2c; /* marrom suave */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d49b7e; /* tom terracota */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #b57a60;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========== HEADER ========== */
+header {
+    background-color: #fffaf5;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #d49b7e;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ========== BANNER ========== */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/banners/banner-principal.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* ========== PRODUTOS GRID ========== */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-conteudo {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-conteudo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-conteudo p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-weight: 700;
+    color: #d49b7e;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background-color: transparent;
+    border: 2px solid #d49b7e;
+    color: #d49b7e;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #d49b7e;
+    color: white;
+}
+
+/* ========== SOBRE HOME ========== */
+.sobre-home {
+    background-color: #f5e7df;
+    padding: 60px 0;
+}
+
+.sobre-home .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-conteudo {
+    flex: 1;
+}
+
+.sobre-imagem {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ========== FILTROS ========== */
+.filtros {
+    background-color: #fffaf5;
+    padding: 30px 0;
+}
+
+.filtros-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.filtro-btn.active,
+.filtro-btn:hover {
+    background-color: #d49b7e;
+    color: white;
+    border-color: #d49b7e;
+}
+
+/* ========== RODAPÉ ========== */
+footer {
+    background-color: #3e2c23; /* marrom escuro */
+    color: #eee;
+    padding: 50px 0 20px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+footer h3, footer h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #d49b7e;
+}
+
+.social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+/* ========== PÁGINA DE TÍTULO ========== */
+.pagina-titulo {
+    background-color: #f5e7df;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pagina-titulo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* ========== CONTATO ========== */
+.contato .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.contato-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contato-info i {
+    width: 30px;
+    color: #d49b7e;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.contato-form button {
+    align-self: flex-start;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .banner h1 {
+        font-size: 2rem;
+    }
+    .sobre-home .container {
+        flex-direction: column;
+    }
+    .contato .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== ERRO 404 ========== */
+.erro-404 {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.erro-404 h1 {
+    font-size: 6rem;
+    color: #d49b7e;
+}
